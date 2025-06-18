@@ -1,0 +1,5 @@
+<launch>
+
+    <node name = "mit_controller" pkg = "quadruped_controller" type = "mit_controller" output="screen" />
+
+</launch>

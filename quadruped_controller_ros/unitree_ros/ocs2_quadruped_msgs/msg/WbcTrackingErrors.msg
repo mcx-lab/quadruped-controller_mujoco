@@ -1,0 +1,20 @@
+# time stamp
+time time
+
+# Tracking errors for the whole-body controller
+geometry_msgs/Vector3 base_position_error
+geometry_msgs/Vector3 base_linear_velocity_error
+geometry_msgs/Vector3 base_orientation_error
+geometry_msgs/Vector3 base_angular_velocity_error
+geometry_msgs/Vector3[4] feet_position_error
+geometry_msgs/Vector3[4] feet_velocity_error
+float64[12] joint_position_error
+
+# Norms of the tracking errors
+float64 base_position_error_norm
+float64 base_linear_velocity_error_norm
+float64 base_orientation_error_norm
+float64 base_angular_velocity_error_norm
+float64 feet_position_error_norm
+float64 feet_velocity_error_norm
+float64 joint_position_error_norm
