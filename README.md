@@ -62,7 +62,40 @@ cd docker_scripts
 
 - [BruceChanJianLe/docker-nvidia-ubuntu-ros](https://github.com/BruceChanJianLe/docker-nvidia-ubuntu-ros.git)
 
-## Build the workspace
+## Dependencies
+### Mujoco
+```
+git clone https://github.com/deepmind/mujoco.git
+```
+```
+cd ~/mujoco
+mkdir build
+cd build
+cmake ..
+cmake --build .
+cmake --install .
+```
+Check whether install correctly:
+```
+simulate
+```
+#### Reference
+- [Mujoco build from source](https://mujoco.readthedocs.io/en/latest/programming/#building-mujoco-from-source)
+### Unitree_sdk2
+```
+git clone https://github.com/unitreerobotics/unitree_sdk2.git
+```
+```
+cd ~/unitree_sdk2
+mkdir build
+cd build
+cmake ..
+sudo make install
+```
+#### Reference
+- [Unitree_sdk2 official download](https://github.com/unitreerobotics/unitree_sdk2)
+
+## Building the workspace
 ```
 catkin_make --pkg unitree_legged_msgs
 source devel/setup.bash
